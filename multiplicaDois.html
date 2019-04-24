@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usando appendChild & removeChild com funções</title>
+</head>
+<body>
+    <header>
+        <h3>Estudo para criação de Tags manipulando o DOM - Document Object Model</h3>
+        <p>Estudo para adicionar e remover tags com 3 funções ligadas em 3 botões!</p>
+    </header>
+    <div id="container">
+    
+    </div>
+
+    <!--Para os leigos o onclick é um evento do Dom onde determinado clique for acionado tera algum comportamento!!-->
+    <button onclick="duplica()">Opção Um</button>
+    <button onclick="duplicaDois()">Opção Dois</button>
+    <button onclick="apaga()">Apagar</button>
+
+    <script>
+       //Escopo global!!
+       let div = document.getElementById('container');
+       let creation = document.createElement('img');
+       let creationTwo = document.createElement('img');
+
+       //Adicionando imagens as variáveis!
+       creation.src="serpro.png";
+       creationTwo.src="serpro.png";
+       //Caso acionado essa função será impressa primeiro!
+       function duplica(){
+        div.appendChild(creation).style.backgroundColor = ('gray');
+       }
+       //Caso acionado essa função será impressa primeiro!
+       function duplicaDois(){
+        div.appendChild(creationTwo).style.backgroundColor = ('blue');
+       }
+       //Função que remove as Tags filhas!
+       function apaga(){
+        div.removeChild(creation) && div.removeChild(creationTwo);
+       }
+    </script>
+</body>
+</html>
