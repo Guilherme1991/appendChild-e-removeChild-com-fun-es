@@ -1,2 +1,2 @@
-# appendChild-e-removeChild-com-fun-es
+# appendChild-e-removeChild-com-funcoes
 Criando appendChild e removeChild com funções
