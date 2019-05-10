@@ -38,7 +38,13 @@
        }
        //Função que remove as Tags filhas!
        function apaga(){
-        div.removeChild(creation) || div.removeChild(creationTwo);
+        if(creation){
+        div.removeChild(creation);
+       }
+        else{
+        div.removeChild(creationTwo);
+               
+       }
        }
     </script>
 </body>
